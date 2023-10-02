@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Web.UI.WebControls;
 
 namespace StockWebService
 {
     /// <summary>
-    /// Summary description for StockService1
+    /// Summary description for WebService1
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-    [System.Web.Script.Services.ScriptService]
-    public class StockService1 : System.Web.Services.WebService
+    // [System.Web.Script.Services.ScriptService]
+    public class WebService1 : System.Web.Services.WebService
     {
 
         [WebMethod(MessageName = "Hello")]
@@ -73,6 +74,26 @@ namespace StockWebService
             {
                 return "Your nameInitial is Sandhya";
             }
+        }
+
+        string[,] details =
+        {
+            {"SRA", "Sandhya Rani", "24-02-2003"},
+            {"MRA", "Manaswini Ray", "30-09-2002"},
+            {"AKU", "Aakriti Kumari", "14-04-2002"}
+        };
+
+        [WebMethod(MessageName ="For getting the birth date")]
+        public DateTime GetBirthDate(string symbol)
+        {
+            for (int i = 0; i < details.GetLength(0); i++)
+            {
+                if (string.Compare(symbol, details[i,0])==0)
+                {
+                    return Convert.ToDateTime(details[i,2]);
+                }
+            }
+            return DateTime.MinValue;
         }
 
 

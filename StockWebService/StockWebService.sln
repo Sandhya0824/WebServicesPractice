@@ -5,6 +5,11 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockWebService", "StockWebService\StockWebService.csproj", "{81115CF5-643A-4735-9C67-785BA5B901C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockWebApplication", "StockWebApplication\StockWebApplication.csproj", "{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{81115CF5-643A-4735-9C67-785BA5B901C9} = {81115CF5-643A-4735-9C67-785BA5B901C9}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{81115CF5-643A-4735-9C67-785BA5B901C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81115CF5-643A-4735-9C67-785BA5B901C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81115CF5-643A-4735-9C67-785BA5B901C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
