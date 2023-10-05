@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="employeeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Employee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="employeeID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employeeResult" type="tns:Employee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn">
+    <wsdl:part name="parameters" element="tns:For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut">
+    <wsdl:part name="parameters" element="tns:For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn">
+    <wsdl:part name="parameters" element="tns:For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut">
+    <wsdl:part name="parameters" element="tns:For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn">
+    <wsdl:part name="parameters" element="tns:For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut">
+    <wsdl:part name="parameters" element="tns:For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn">
+    <wsdl:part name="parameters" element="tns:For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut">
+    <wsdl:part name="parameters" element="tns:For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employeeSoapIn">
+    <wsdl:part name="parameters" element="tns:For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee" />
+  </wsdl:message>
+  <wsdl:message name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employeeSoapOut">
+    <wsdl:part name="parameters" element="tns:For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employeeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="AddEmployee">
+      <wsdl:input name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn" />
+      <wsdl:output name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEmployee">
+      <wsdl:input name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn" />
+      <wsdl:output name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeFirstName">
+      <wsdl:input name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn" />
+      <wsdl:output name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeLastName">
+      <wsdl:input name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapIn" />
+      <wsdl:output name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list" message="tns:For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:input name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee" message="tns:For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employeeSoapIn" />
+      <wsdl:output name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee" message="tns:For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employeeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddEmployee">
+      <soap:operation soapAction="http://tempuri.org/For adding an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEmployee">
+      <soap:operation soapAction="http://tempuri.org/For removing an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeFirstName">
+      <soap:operation soapAction="http://tempuri.org/For updating the first name of an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeLastName">
+      <soap:operation soapAction="http://tempuri.org/For updating the last name of an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/For getting tha name of the employee" style="document" />
+      <wsdl:input name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddEmployee">
+      <soap12:operation soapAction="http://tempuri.org/For adding an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_adding_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEmployee">
+      <soap12:operation soapAction="http://tempuri.org/For removing an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_removing_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeFirstName">
+      <soap12:operation soapAction="http://tempuri.org/For updating the first name of an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_updating_x0020_the_x0020_first_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeLastName">
+      <soap12:operation soapAction="http://tempuri.org/For updating the last name of an employee and getting the whole employee list" style="document" />
+      <wsdl:input name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_updating_x0020_the_x0020_last_x0020_name_x0020_of_x0020_an_x0020_employee_x0020_and_x0020_getting_x0020_the_x0020_whole_x0020_employee_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap12:operation soapAction="http://tempuri.org/For getting tha name of the employee" style="document" />
+      <wsdl:input name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="For_x0020_getting_x0020_tha_x0020_name_x0020_of_x0020_the_x0020_employee">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44386/EmployeeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44386/EmployeeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

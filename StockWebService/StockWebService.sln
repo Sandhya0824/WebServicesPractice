@@ -10,6 +10,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockWebApplication", "Stoc
 		{81115CF5-643A-4735-9C67-785BA5B901C9} = {81115CF5-643A-4735-9C67-785BA5B901C9}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeWebService", "EmployeeWebService\EmployeeWebService.csproj", "{3B7A25D0-5AFE-4A0B-9636-6A1514A5D5ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeWebApplication", "EmployeeWebApplication\EmployeeWebApplication.csproj", "{32091FAE-83DB-4E73-91C3-724D5BCF8F27}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3B7A25D0-5AFE-4A0B-9636-6A1514A5D5ED} = {3B7A25D0-5AFE-4A0B-9636-6A1514A5D5ED}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +31,14 @@ Global
 		{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA6E5E1-075C-4F54-A0F0-0FE5500591B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B7A25D0-5AFE-4A0B-9636-6A1514A5D5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7A25D0-5AFE-4A0B-9636-6A1514A5D5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7A25D0-5AFE-4A0B-9636-6A1514A5D5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7A25D0-5AFE-4A0B-9636-6A1514A5D5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32091FAE-83DB-4E73-91C3-724D5BCF8F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32091FAE-83DB-4E73-91C3-724D5BCF8F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32091FAE-83DB-4E73-91C3-724D5BCF8F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32091FAE-83DB-4E73-91C3-724D5BCF8F27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

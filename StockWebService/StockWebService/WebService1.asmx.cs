@@ -17,7 +17,7 @@ namespace StockWebService
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
     {
-
+        
         [WebMethod(MessageName = "Hello")]
         public string HelloWorld()
         {
@@ -49,17 +49,6 @@ namespace StockWebService
         }
 
         [WebMethod(MessageName = "For getting the user's nameInitial by writing her initial")]
-        /* public string GetName()
-        {
-            Console.WriteLine("What is your nameInitial?");
-            string nameInitial = Console.ReadLine();
-            return nameInitial;
-        }*/
-        /*public string GetName(string nameInitial)
-        {
-            Console.WriteLine("What is your nameInitial?");
-            return nameInitial;
-        }*/
         public string GetName(char nameInitial)
         {
             if (nameInitial == 'A' || nameInitial == 'a')
@@ -95,7 +84,7 @@ namespace StockWebService
             }
             return DateTime.MinValue;
         }
-
+        
 
     }
 }
